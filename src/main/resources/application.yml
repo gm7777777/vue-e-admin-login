@@ -1,0 +1,27 @@
+server:
+    port: 8090
+    servletPath: /
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:8081/eureka/
+        enabled: true
+    instance:
+        healthCheckUrlPath: ${server.servletPath}/health
+        statusPageUrlPath: ${server.servletPath}/info
+        homePageUrl: ${server.servletPath}/
+        healthcheck:
+            enabled: true
+spring:
+    application:
+        name: LoginServ
+    datasource:
+        username: root
+        password: Audit~2019
+        url: jdbc:mysql://192.168.56.101:3306/webadmin?characterEncoding=UTF-8&useSSL=false
+        driver-class-name: org.gjt.mm.mysql.Driver
+
+mybatis:
+    mapper-locations: classpath:mapper/*.xml
+    type-aliases-package: entity
+
