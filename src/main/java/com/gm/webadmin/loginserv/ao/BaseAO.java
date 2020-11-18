@@ -4,7 +4,7 @@ public abstract class BaseAO {
 
     public int retcode;
     public String msg;
-    public String status;
+    public Object data;
 
     public int getRetcode() {
         return retcode;
@@ -22,11 +22,11 @@ public abstract class BaseAO {
         this.msg = msg;
     }
 
-    public String getStatus() {
-        return status;
+    public Object getData() {
+        return data;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setData(Object data) {
+        this.data = data;
     }
 }

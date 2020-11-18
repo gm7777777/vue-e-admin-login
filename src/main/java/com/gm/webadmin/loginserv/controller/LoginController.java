@@ -26,14 +26,13 @@ public class LoginController {
 
         if(flag){
             bizRetAO.setRetcode(0);
-            bizRetAO.setStatus("00");
             bizRetAO.setMsg("success");
 
         }else{
             bizRetAO.setRetcode(1);
-            bizRetAO.setStatus("01");
             bizRetAO.setMsg("fail");
         }
+        bizRetAO.setData(flag);
         return bizRetAO;
     }
 
@@ -45,14 +44,13 @@ public class LoginController {
 
         if(flag){
             bizRetAO.setRetcode(0);
-            bizRetAO.setStatus("00");
             bizRetAO.setMsg("success");
 
         }else{
             bizRetAO.setRetcode(1);
-            bizRetAO.setStatus("01");
             bizRetAO.setMsg("fail");
         }
+        bizRetAO.setData(flag);
         return bizRetAO;
     }
 }
