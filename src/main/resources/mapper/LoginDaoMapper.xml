@@ -58,4 +58,30 @@
         </set>
         where id = #{id,jdbcType=VARCHAR}
     </update>
+
+    <sql id="User_Columns">
+    id,accountnum,name,password,state,remark,createtime,temp1,temp2
+  </sql>
+    <resultMap id="BaseResultMap" type="com.gm.webadmin.loginserv.entity.User">
+        <id column="id" jdbcType="VARCHAR" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="accountnum" jdbcType="VARCHAR" property="accountnum" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
+        <result column="state" jdbcType="INTEGER" property="state" />
+        <result column="remark" jdbcType="VARCHAR" property="remark" />
+        <result column="createtime" jdbcType="DATE" property="createTime" />
+        <result column="updatetime" jdbcType="DATE" property="updateTime" />
+        <result column="temp1" jdbcType="VARCHAR" property="temp1" />
+        <result column="temp2" jdbcType="VARCHAR" property="temp2" />
+    </resultMap>
+    <select id="findPage" resultMap="BaseResultMap">
+    select
+    <include refid="User_Columns"/>
+    from w_sys_user
+    </select>
+<!--    <select id="findPage" resultType="com.gm.webadmin.loginserv.entity.User">-->
+<!--        select-->
+<!--        <include refid="User_Columns"/>-->
+<!--        from w_sys_user-->
+<!--    </select>-->
 </mapper>

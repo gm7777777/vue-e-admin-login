@@ -1,6 +1,8 @@
 package com.gm.webadmin.loginserv.entity;
 
-public class User extends BaseEnt{
+import com.gm.webadmin.common.entity.BaseEnt;
+
+public class User extends BaseEnt {
     public String accountnum;
 
     public String password;
